@@ -1,0 +1,71 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}/
+    %title HTML5 & CSS3 Showcase
+    %link{:href => "css/reset.css", :rel => "stylesheet"}/
+    %link{:href => "css/text.css", :rel => "stylesheet"}/
+    %link{:href => "css/960.css", :rel => "stylesheet"}/
+    %link{:href => "css/css3.css", :rel => "stylesheet"}/
+  %body
+    %h1
+      Draft 2 (HTML5 & CSS3)
+    %section.container_12
+      %header
+        %section#logo LOGO (300 *140px)
+        /
+          Example 1 using Wrapper
+          <section id="adcontent">
+          <section class="ad"></section>
+          <section class="ad"></section>
+          </section>
+        / Example 2 without Wrapper and just using classes
+        %section.box.ad_140.first Content1 (140*140)
+        %section.box.ad_140 Content2 (140*140)
+      %nav
+        / <menu type="toolbar"> is more relavent in context of WebApps  but <nav> could be used if it's a list of navigational links
+        %button.button{:name => "Button1(120*40)", :type => "button"} Button1(120*40)
+        %button.button{:name => "Button2(120*40)", :type => "button"} Button2(120*40)
+        %button.button{:name => "Button3(120*40)", :type => "button"} Button3(120*40)
+        %button.button{:name => "Button4(120*40)", :type => "button"} Button4(120*40)
+        %button.button{:name => "Button5(120*40)", :type => "button"} Button5(120*40)
+      %section
+        %section.box.b_300 Box1(300*300)
+        %section.box.b_300.middle Box2(300*300)
+        %section.box.b_300 Box3(300*300)
+      %table
+        %tr
+          %th My Table
+          %th Column 1
+          %th Column 2
+        %tr
+          %td Row 1
+          %td Row 1 Column 1
+          %td Row 1 Column 2
+        %tr.alt
+          %td Row 2
+          %td Row 2 Column 1
+          %td Row 2 Column 2
+        %tr
+          %td Row 3
+          %td Row 3 Column 1
+          %td Row 3 Column 2
+      %section#gallery
+      %footer
+        %h6
+          %a{:href => "http://validator.w3.org/check?uri=referer"} Valid HTML5
+    / end .container_12
+    / jQuery
+    / <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    :javascript
+      function yourcallbackfunction(data){
+          ul = document.getElementById('gallery');
+          data.map(function(imageUrl){
+                   console.log(imageUrl);
+                   var imageNode=document.createElement("img");
+                   imageNode.src = imageUrl;
+                   document.getElementById("gallery").appendChild(imageNode);
+                   });
+      }
+      
+          %script{:src => "http://numberonelarge.com/tapjoy/jsonp.php?callback=yourcallbackfunction", :type => "text/javascript"}

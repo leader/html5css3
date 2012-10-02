@@ -1,0 +1,81 @@
+!!! Strict
+%html{:xmlns => "http://www.w3.org/1999/xhtml"}
+  %head
+    %meta{:content => "text/html;charset=utf-8", "http-equiv" => "Content-Type"}/
+    %title HTML & CSS Showcase
+    %link{:href => "css/reset.css", :rel => "stylesheet"}/
+    %link{:href => "css/text.css", :rel => "stylesheet"}/
+    %link{:href => "css/960.css", :rel => "stylesheet"}/
+    %link{:href => "css/demo.css", :rel => "stylesheet"}/
+  %body
+    %h1
+      Draft 1 (Legacy HTML & CSS)
+    .container_12
+      #header
+        #logo LOGO (300 *140px)
+        /
+          Example 1 using Wrapper
+          <div id="adcontent">
+          <div class="ad"></div>
+          <div class="ad"></div>
+          </div>
+        / Example 2 without Wrapper and just using classes
+        .ad.first Content1 (140*140)
+        .ad Content2 (140*140)
+      / End Header
+      /
+        Example 1 : Illustration of Buttons with image backgrounds
+        <div id="nav" class="center">
+        <div class="button"><a href="">Button(120*40)</a></div>
+        <div class="button"><a href="">Button(120*40)</a></div>
+        <div class="button"><a href="">Button(120*40)</a> </div>
+        <div class="button"><a href="">Button(120*40)</a></div>
+        <div class="button"><a href="">Button(120*40)</a></div>
+        </div>
+      / Example 2: Illustration of Buttons using form field Input Type
+      #nav
+        %input.button{:type => "button", :value => "Button1(120*40)"}/
+        %input.button{:type => "button", :value => "Button2(120*40)"}/
+        %input.button{:type => "button", :value => "Button3(120*40)"}/
+        %input.button{:type => "button", :value => "Button4(120*40)"}/
+        %input.button{:type => "button", :value => "Button5(120*40)"}/
+      #box
+        .box_300 (300*300)
+        .box_300.middle (300*300)
+        .box_300 (300*300)
+      %table
+        %tr
+          %th My Table
+          %th Column 1
+          %th Column 2
+        %tr
+          %td Row 1
+          %td Row 1 Column 1
+          %td Row 1 Column 2
+        %tr.alt
+          %td Row 2
+          %td Row 2 Column 1
+          %td Row 2 Column 2
+        %tr
+          %td Row 3
+          %td Row 3 Column 1
+          %td Row 3 Column 2
+      #gallery
+      #footer
+        %a{:href => "http://validator.w3.org/check?uri=referer"}
+          %img{:alt => "Valid XHTML 1.0 Strict", :height => "31", :src => "http://www.w3.org/Icons/valid-xhtml10", :width => "88"}/
+    / end .container_12
+    / jQuery
+    / <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    :javascript
+      function yourcallbackfunction(data){
+          ul = document.getElementById('gallery');
+          data.map(function(imageUrl){
+                   console.log(imageUrl);
+                   var imageNode=document.createElement("img");
+                   imageNode.src = imageUrl;
+                   document.getElementById("gallery").appendChild(imageNode);
+                   });
+      }
+      
+          %script{:src => "http://numberonelarge.com/tapjoy/jsonp.php?callback=yourcallbackfunction", :type => "text/javascript"}
