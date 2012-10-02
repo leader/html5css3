@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>TapJoy Website</title>
+<title>HTML5 & CSS3 Showcase</title>
 <link rel="stylesheet" href="css/reset.css" />
 <link rel="stylesheet" href="css/text.css" />
 <link rel="stylesheet" href="css/960.css" />
@@ -10,7 +10,7 @@
 </head>
 <body>
 <h1>
-  Draft 2 (HTML5 & CSS3)
+  Draft 2 (HTML5 &amp; CSS3)
 </h1>
 
 
@@ -28,8 +28,8 @@
 
 			<!-- Example 2 without Wrapper and just using classes -->
 
-			<section class="ad first">Content1 (140*140)</section>
-			<section class="ad">Content2 (140*140)</section> 
+			<section class="box ad_140 first">Content1 (140*140)</section>
+			<section class="box ad_140">Content2 (140*140)</section> 
 
 	</header>
 	<nav> <!-- <menu type="toolbar"> is more relavent in context of WebApps  but <nav> could be used if it's a list of navigational links -->
@@ -39,10 +39,10 @@
 		<button type="button" class="button" name="Button4(120*40)">Button4(120*40)</button>
 		<button type="button" class="button" name="Button5(120*40)">Button5(120*40)</button>
 	</nav>
-	<section id="box">
-		<section class="box_300">Box1(300*300) </section>
-		<section class="box_300 middle">Box2(300*300) </section>
-		<section class="box_300">Box3(300*300) </section>
+	<section>
+		<section class="box b_300">Box1(300*300)</section>
+		<section class="box b_300 middle">Box2(300*300)</section>
+		<section class="box b_300">Box3(300*300)</section>
 	</section>
 	<table>
 	
@@ -69,7 +69,7 @@
 	</table>
 	<section id="gallery"></section>
 	<footer> 
-			  <h6><a href="http://validator.w3.org/check?uri=referer">Valid HTML5</a><h6>
+			  <h6><a href="http://validator.w3.org/check?uri=referer">Valid HTML5</a></h6>
 			
 	</footer>
 	</section>
@@ -79,7 +79,7 @@
 	<!-- jQuery -->
 <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> -->
 
-    <script type="text/javascript">
+<script type="text/javascript">
         function yourcallbackfunction(data){
             ul = document.getElementById('gallery');
             data.map(function(imageUrl){
@@ -91,7 +91,9 @@
         }
         
         </script>
-    <script src="http://numberonelarge.com/tapjoy/jsonp.php?callback=yourcallbackfunction" type="text/javascript"></script>
+    <script src="http://numberonelarge.com/tapjoy/jsonp.php?callback=yourcallbackfunction" type="text/javascript"> </script>
+
+    
  
 </body>
 </html>
