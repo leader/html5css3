@@ -1,0 +1,69 @@
+This project is to implement a Sample Mockup in Legacy HTML4.x and CSS2.x and implement the same in HTML5 & CSS3
+
+The Sample Mockup page consists of 
+
+-- Header with Logo and two ad blocks
+-- Navigation with 5 buttons
+-- Content with 3 equal sized columns
+-- A gallery feed fetching images with different heights from a JSONP URL and displaying them in tiles without any gaps/padding/margins. (Involves Javascript)
+
+The Mockup file is mockup.png
+The Legacy code is in the legacy.html & demo.css
+The HTML5&CSS3 code is in html5css3.html & css3.css
+
+
+
+HTML5&CSS3
+
+-- HTML5 elements (header, nav, section, footer etc)
+
+-- CSS3 Flex Box model
+
+-- CSS3 box-sizing, column-count, column-gap, box-orient, box-flex, box-pack appearance, diplay : content-box or border-box
+
+SASS
+-- Nested Rules
+-- Mixins
+
+
+The HTML5 is also converted to #HAML http://haml.info
+The CSS3 is also listed in SASS http://sass-lang.com
+
+
+Some References used :
+
+Fetching data from external JSONP URL : http://stackoverflow.com/questions/9922101/get-json-data-from-external-url-and-display-a-particular-value-by-injecting-it-i
+
+CSS3 Image Gallery : http://css-tricks.com/seamless-responsive-photo-grid/
+
+W3C Validator : http://validator.w3.org
+
+HTML Layout Engines : http://en.wikipedia.org/wiki/Comparison_of_layout_engines_%28HTML_5%29
+
+CSS3 Flex Box Model : http://www.html5rocks.com/en/tutorials/flexbox/quick/
+
+CSS3 Flexible Box Model in Action: http://flexiejs.com
+
+Differences between HTML5 & HTML4.X : http://www.w3.org/TR/html5-diff/
+
+Convert CSS to SASS: http://css2sass.heroku.com/
+
+Convert HTML to HAML : http://html2haml.heroku.com/ 
+
+Further Enhancements could be done using the following
+
+CSS
+
+http://lesscss.org/
+
+Templating
+
+http://handlebarsjs.com/
+http://mustache.github.com/
+
+Feature Detection of HTML5 & CSS3
+http://modernizr.com (and for the Ugly and good old IE)
+
+http://jquerymobile.com
+
+Responsive Design using @Media Queries
